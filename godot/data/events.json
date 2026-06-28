@@ -1,0 +1,131 @@
+[
+  {
+    "id": "event_001",
+    "trigger": "morning_phase",
+    "weight": 3,
+    "cooldown_days": 2,
+    "text": "Control sends mission briefing.",
+    "flavor": "A coded data burst arrives at 0600. New tactical directive uploaded.",
+    "choices": [
+      { "label": "Review briefing", "stat_changes": [{ "resource": "intel", "amount": 2 }] }
+    ]
+  },
+  {
+    "id": "event_002",
+    "trigger": "morning_phase",
+    "weight": 4,
+    "cooldown_days": 3,
+    "text": "Unusual perimeter activity detected.",
+    "flavor": "Motion sensors pick up irregular patterns on the eastern perimeter fence.",
+    "choices": [
+      { "label": "Increase patrols", "stat_changes": [{ "resource": "security", "amount": -10 }] },
+      { "label": "Ignore (save resources)", "stat_changes": [] }
+    ]
+  },
+  {
+    "id": "event_003",
+    "trigger": "morning_phase",
+    "weight": 3,
+    "cooldown_days": 3,
+    "text": "Control transfers emergency funds to Site Omega.",
+    "flavor": "A coded message arrives at 0300: 'Expenses approved. Don't ask questions.'",
+    "choices": [
+      { "label": "Accept", "stat_changes": [{ "resource": "budget", "amount": 1000 }] },
+      { "label": "Refuse (moral)", "stat_changes": [{ "resource": "moral_alignment", "amount": 5 }, { "resource": "control_trust", "amount": -10 }] }
+    ]
+  },
+  {
+    "id": "event_004",
+    "trigger": "base_phase",
+    "weight": 3,
+    "cooldown_days": 4,
+    "text": "Detainee escape attempt!",
+    "flavor": "Alarms blare as a detainee is spotted using a makeshift tool on the cell door.",
+    "choices": [
+      { "label": "Lockdown (security check)", "stat_changes": [{ "resource": "security", "amount": -5 }] },
+      { "label": "Let them try (risky)", "stat_changes": [] }
+    ]
+  },
+  {
+    "id": "event_005",
+    "trigger": "end_of_day",
+    "weight": 4,
+    "cooldown_days": 2,
+    "text": "Operative shows signs of stress.",
+    "flavor": "One of your operatives was found staring at the wall in the corridor. They didn't respond to your presence.",
+    "choices": [
+      { "label": "Mandatory rest", "stat_changes": [{ "resource": "moral_alignment", "amount": 3 }] },
+      { "label": "Tough it out", "stat_changes": [] }
+    ]
+  },
+  {
+    "id": "event_006",
+    "trigger": "end_of_day",
+    "weight": 3,
+    "cooldown_days": 3,
+    "text": "Control questions your recent decisions.",
+    "flavor": "A curt message from Control: 'Your last report raised concerns. Explain yourself.'",
+    "choices": [
+      { "label": "Submit formal justification", "stat_changes": [{ "resource": "control_trust", "amount": -5 }] },
+      { "label": "Ignore the message", "stat_changes": [{ "resource": "control_trust", "amount": -10 }] }
+    ]
+  },
+  {
+    "id": "event_007",
+    "trigger": "morning_phase",
+    "weight": 2,
+    "cooldown_days": 4,
+    "text": "Informant tip received.",
+    "flavor": "A dead drop message contains raw intelligence from a source inside GRU operations.",
+    "choices": [
+      { "label": "Analyze intel", "stat_changes": [{ "resource": "intel", "amount": 5 }] }
+    ]
+  },
+  {
+    "id": "event_008",
+    "trigger": "base_phase",
+    "weight": 3,
+    "cooldown_days": 3,
+    "text": "Power fluctuation detected.",
+    "flavor": "The lights flicker across the facility. Generator output is unstable.",
+    "choices": [
+      { "label": "Divert from non-critical systems", "stat_changes": [{ "resource": "moral_alignment", "amount": -2 }] },
+      { "label": "Reroute manually", "stat_changes": [{ "resource": "moral_alignment", "amount": -5 }] }
+    ]
+  },
+  {
+    "id": "event_009",
+    "trigger": "base_phase",
+    "weight": 3,
+    "cooldown_days": 4,
+    "text": "Operative requests reassignment.",
+    "flavor": "One of your operatives asks for a transfer out of Site Omega. Personal reasons.",
+    "choices": [
+      { "label": "Approve transfer", "stat_changes": [{ "resource": "moral_alignment", "amount": 5 }, { "resource": "control_trust", "amount": -5 }] },
+      { "label": "Deny (duty calls)", "stat_changes": [{ "resource": "moral_alignment", "amount": -3 }] }
+    ]
+  },
+  {
+    "id": "event_010",
+    "trigger": "morning_phase",
+    "weight": 2,
+    "cooldown_days": 5,
+    "text": "Control research dossier.",
+    "flavor": "A heavily encrypted file arrives. Header: 'PROJECT CARDINAL — Research Division.'",
+    "choices": [
+      { "label": "File for later (placeholder)", "stat_changes": [] }
+    ]
+  },
+  {
+    "id": "breach",
+    "trigger": "base_phase",
+    "weight": 2,
+    "cooldown_days": 5,
+    "text": "BREACH! Perimeter security compromised!",
+    "flavor": "Alarms scream across the facility. An unknown force has penetrated the outer perimeter.",
+    "choices": [
+      { "label": "Initiate lockdown", "stat_changes": [{ "resource": "security", "amount": -10 }] },
+      { "label": "Evacuate non-essential personnel", "stat_changes": [{ "resource": "moral_alignment", "amount": 3 }] }
+    ]
+  }
+]

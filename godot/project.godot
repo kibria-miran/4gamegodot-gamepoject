@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Blacksite Command"
+config/description="A 3D turn-based strategy / base management game"
+run/main_scene="res://scenes/main/Main.tscn"
+config/features=PackedStringArray("4.6")
+
+[autoload]
+
+EventBus="*res://autoloads/EventBus.gd"
+RoomDatabase="*res://autoloads/RoomDatabase.gd"
+ResourceManager="*res://autoloads/ResourceManager.gd"
+FacilityManager="*res://autoloads/FacilityManager.gd"
+OperativeManager="*res://autoloads/OperativeManager.gd"
+MoralTracker="*res://autoloads/MoralTracker.gd"
+EventSystem="*res://autoloads/EventSystem.gd"
+DayCycle="*res://autoloads/DayCycle.gd"
+GameState="*res://autoloads/GameState.gd"
+SaveManager="*res://autoloads/SaveManager.gd"
+AudioManager="*res://autoloads/AudioManager.gd"
+TutorialManager="*res://autoloads/TutorialManager.gd"
+CameraManager="*res://autoloads/CameraManager.gd"
+DetaineeManager="*res://autoloads/DetaineeManager.gd"
+
+[input]
+
+debug_skip_enemy={
+"deadzone": 0.5,
+"events": [{
+"keycode": 4194325,
+"type": "key"
+}]
+}
+
+[rendering]
+
+renderer/rendering_method.mobile="forward_plus"

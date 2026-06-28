@@ -1,0 +1,154 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/InterrogationScreen.gd" id="1_int"]
+
+[node name="InterrogationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_int")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_top = -250.0
+offset_bottom = 250.0
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 24
+text = "Interrogation"
+
+[node name="DetaineeList" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 280.0
+offset_bottom = 400.0
+
+[node name="InfoPanel" type="Panel" parent="Panel"]
+layout_mode = 1
+offset_left = 300.0
+offset_top = 60.0
+offset_right = 580.0
+offset_bottom = 400.0
+
+[node name="NameLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 30.0
+text = "Name: "
+
+[node name="IntelLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 40.0
+offset_right = 270.0
+offset_bottom = 60.0
+text = "Intel Value: "
+
+[node name="WillpowerLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 70.0
+offset_right = 270.0
+offset_bottom = 90.0
+text = "Willpower: "
+
+[node name="HealthLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 100.0
+offset_right = 270.0
+offset_bottom = 120.0
+text = "Health: "
+
+[node name="TraitLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 130.0
+offset_right = 270.0
+offset_bottom = 150.0
+text = "Trait: "
+
+[node name="FactionLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 160.0
+offset_right = 270.0
+offset_bottom = 180.0
+text = "Faction: "
+
+[node name="ResultLabel" type="Label" parent="Panel/InfoPanel"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 190.0
+offset_right = 270.0
+offset_bottom = 290.0
+autowrap_mode = 2
+text = ""
+
+[node name="Actions" type="HBoxContainer" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 300.0
+offset_right = 270.0
+offset_bottom = 380.0
+
+[node name="PsychBtn" type="Button" parent="Panel/InfoPanel/Actions"]
+layout_mode = 2
+text = "Psychological"
+tooltip_text = "Low willpower damage, no health risk, low moral penalty"
+
+[node name="ChemBtn" type="Button" parent="Panel/InfoPanel/Actions"]
+layout_mode = 2
+text = "Chemical"
+tooltip_text = "Medium willpower damage, some health risk, medium moral penalty"
+
+[node name="PhysBtn" type="Button" parent="Panel/InfoPanel/Actions"]
+layout_mode = 2
+text = "Physical"
+tooltip_text = "High willpower damage, high health risk, severe moral penalty"
+
+[node name="PostActions" type="HBoxContainer" parent="Panel/InfoPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 390.0
+offset_right = 270.0
+offset_bottom = 430.0
+
+[node name="ReleaseBtn" type="Button" parent="Panel/InfoPanel/PostActions"]
+layout_mode = 2
+text = "Release"
+
+[node name="EliminateBtn" type="Button" parent="Panel/InfoPanel/PostActions"]
+layout_mode = 2
+text = "Eliminate"
+
+[node name="CloseBtn" type="Button" parent="Panel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 450.0
+offset_right = 180.0
+offset_bottom = 480.0
+text = "Close"

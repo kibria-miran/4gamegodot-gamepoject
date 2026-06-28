@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/HUD.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 1
+script = ExtResource("1_hud")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 600.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="Resources" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 250.0
+
+[node name="DayLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Day: 1"
+
+[node name="BudgetLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "Budget: $5000"
+
+[node name="IntelLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "Intel: 0"
+
+[node name="PowerLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "Power: 0"
+
+[node name="OxygenLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "O2: 100"
+
+[node name="SecurityLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "Security: 50"
+
+[node name="ControlTrustLabel" type="Label" parent="Panel/Resources"]
+layout_mode = 2
+text = "Trust: 80"
+
+[node name="Controls" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 260.0
+offset_right = 190.0
+offset_bottom = 450.0
+
+[node name="EndDayBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "End Day"
+
+[node name="BuildBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "Build"
+
+[node name="SaveBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "Save"
+
+[node name="PersonnelBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "Personnel"
+
+[node name="DetaineeBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "Detainees"
+
+[node name="LoadBtn" type="Button" parent="Panel/Controls"]
+layout_mode = 2
+text = "Load"
+
+[node name="DetaineeCount" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 480.0
+text = "Detainees: 0/1"
+
+[node name="PhaseLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 500.0
+text = "Phase: BASE"

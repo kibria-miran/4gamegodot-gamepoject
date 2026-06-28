@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RoomData" format=3]
+
+[resource]
+script = Resource("res://resources/rooms/RoomData.gd")
+id = "containment_cell"
+display_name = "Containment Cell"
+cost = 600
+power_production = 0.0
+power_consumption = 5.0
+oxygen_consumption = 5.0
+tier = 1
+security_modifier = 0
+morale_modifier = 0
+budget_cap_bonus = 0
